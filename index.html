@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="js/two.js"></script>
+    <style>
+		body {
+			background-color: #ECF0F1;
+		}
+		#heart {
+      background-color: #fff;
+			max-width: 500px;
+			margin: 0 auto;
+			margin-top: 100px;
+
+		}
+    </style>
+  </head>
+  <body>
+
+  <div id="heart"></div>
+    <script>
+
+var elem = document.getElementById('heart');
+var params = { width: 500, height: 500 };
+var two = new Two(params).appendTo(elem);
+
+// two has convenience methods to create shapes. two.makeEllipse(x, y, width, height)
+var circle1 = two.makeEllipse(150, 200, 40, 50);
+var circle2 = two.makeEllipse(350, 200, 40, 50);
+var poligon = two.makePolygon(250, 207, 189, 164, 305, 164, open);
+
+
+// The object returned has many stylable properties:
+circle1.fill = '#E74C3C';
+circle1.linewidth = 5;
+circle1.opacity = '0.75';
+circle1.rotation = '-0.9';
+circle1.noStroke();
+// circle1.translation.set(222, 202);
+
+circle2.fill = '#E74C3C';
+circle2.linewidth = 5;
+circle2.opacity = '0.75';
+circle2.rotation = '0.9'
+circle2.noStroke();
+// circle2.translation.set(278, 202);
+
+poligon.fill = '#E74C3C';
+poligon.linewidth = 5;
+poligon.opacity = '0.75';
+poligon.noStroke();
+// poligon.translation.set(two.width / 2, two.height / 2);
+
+
+// Don't forget to tell two to render everything
+// to the screen
+two.update();
+    </script>
+  </body>
+</html>
